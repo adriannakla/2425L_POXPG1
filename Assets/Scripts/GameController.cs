@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public string Word = "after";
     public TextMeshProUGUI MainWord;
     public TextMeshProUGUI OurInput;
+    public TextMeshProUGUI SubmittedInput;
     public TMP_InputField InputField;
 
 
@@ -21,6 +22,11 @@ public class GameController : MonoBehaviour
     {
         OurInput.text = input;
 
+    }
+
+    public void OnClick()
+    {
+        SubmittedInput.text = OurInput.text;
     }
 
     // Update is called once per frame
